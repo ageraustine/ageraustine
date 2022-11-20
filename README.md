@@ -1,4 +1,4 @@
-### Hi there 👋 I'm Ager Austine
+### ### Hello <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px"/>, I am Ager Austine
 
 <!--
 **ageraustine/ageraustine** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+# Background
+## I am a machine learning engineer with expertise on Tensorflow and python
+## I have a soft spot for web, server and app development using Nodejs
+
+# Current R&Ds
+## I am currently working as a both a fullstack developer and machine learning engineer on Pesa Token, a USSD accesible platform which enables users to trade, convert and invest with crypto.
+## I am currently working on Lookufy, a platform which lets users to plan, upgrade and dispose their garments economically.
