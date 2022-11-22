@@ -14,10 +14,11 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-### Background
-#### I am a machine learning engineer with expertise on Tensorflow and python
-#### I have a soft spot for web, server and app development using Nodejs
+#### Background
+##### I am a machine learning engineer with expertise on Tensorflow and python
+##### I have a soft spot for web, server and app development using Nodejs Frameworks
 
-### Current R&Ds
-#### I am currently working as a both a fullstack developer and machine learning engineer on Pesa Token, a USSD accesible platform which enables users to trade, convert and invest with crypto.
-#### I am currently working on Lookufy, a platform which lets users to plan, upgrade and dispose their garments economically.
+
+#### Current R&Ds
+###### I am currently working as a both a fullstack developer and machine learning engineer on Pesa Token, a USSD accesible platform which enables users to trade, convert and invest with crypto.
+###### I am currently working on Yalooku, a platform which lets users plan, upgrade and dispose their garments economically.
