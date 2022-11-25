@@ -21,4 +21,4 @@ Here are some ideas to get you started:
 
 #### Current R&Ds
 ###### I am currently working as a both a fullstack developer and machine learning engineer on Pesa Token, a USSD accesible platform which enables users to trade, convert and invest with crypto.
-###### I am currently working on Yalooku, a platform which lets users plan, upgrade and dispose their garments economically.
+###### I am currently working on Looku, a platform which lets users plan, upgrade and dispose their garments economically.
