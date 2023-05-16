@@ -14,11 +14,4 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-#### Background
-##### I am a machine learning engineer with expertise on Tensorflow and python
-##### I have a soft spot for web, server and app development using Nodejs Frameworks
-
-
-#### Current R&Ds
-###### I am currently working as a both a fullstack developer and machine learning engineer on Pesa Token, a USSD accesible platform which enables users to trade, convert and invest with crypto.
-###### I am currently working on Looku, a platform which lets users plan, upgrade and dispose their garments economically.
+##### You shall know a developer by the length of his code
