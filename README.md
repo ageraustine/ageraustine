@@ -97,6 +97,18 @@ Multi-agent RL environment for full 11-a-side football on PettingZoo, Gymnasium,
 <tr>
 <td width="50%" valign="top">
 
+### 🀄 [MARL Mahjong](https://github.com/ageraustine/mahjong-marl)
+`Python`
+
+Multi-agent RL environment for 4-player Chinese Official (MCR) Mahjong — full rules engine, self-play training, raylib GUI.
+
+- 🎴 144-tile wall, chi/pong/kong claim priority, 77 of MCR's 81 fan-scoring patterns
+- 🎯 Flat 141-action space with per-step legality as an action mask
+- 💰 Reward = real points swing per action — optimizes actual match settlement
+
+</td>
+<td width="50%" valign="top">
+
 ### 🌀 [Neural ODEs — PyTorch Portfolio](https://github.com/ageraustine/neural-ode)
 `Python` `PyTorch`
 
@@ -106,6 +118,8 @@ Three self-contained Neural ODE projects spanning the range of "replace discrete
 - Built on `torchdiffeq`, adjoint-sensitivity aware
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 🧮 [Neural Operators — DeepONet](https://github.com/ageraustine/neural-operators)
@@ -117,7 +131,7 @@ Branch/trunk DeepONet architectures learning solution operators for differential
 - Self-contained numerical solver for training data + unseen-condition evaluation
 
 </td>
-</tr>
+<td width="50%" valign="top">
 
 ### 🔧 [GarageOS](#) — Private repository
 `FastAPI` `Next.js` `PostgreSQL` `M-Pesa`
@@ -128,6 +142,8 @@ Trust-infrastructure platform for multi-branch auto-repair chains in East Africa
 - 🏆 **Trust Score** per job: estimate accuracy (35%), verification rate (25%), timeliness (20%), quality/comeback rate (20%)
 - 🏢 Full job workflow (intake → diagnosis → working → washing → ready → paid) + HR module + multi-branch HQ visibility
 
+</td>
+</tr>
 </table>
 
 <br>

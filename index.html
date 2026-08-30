@@ -217,6 +217,26 @@
         </div>
       </article>
 
+      <!-- Mahjong MARL -->
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-lang">PYTHON</span>
+          <a href="https://github.com/ageraustine/mahjong-marl" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/mahjong-marl ↗</a>
+        </div>
+        <h3 class="project-title">MARL Mahjong</h3>
+        <p class="project-desc">
+          A multi-agent reinforcement-learning environment for 4-player Chinese Official (MCR) Mahjong — a full rules engine, self-play training, and a raylib GUI for interactive play.
+        </p>
+        <ul class="project-points">
+          <li>Implements the 144-tile wall, chi/pong/kong claim priority, and 77 of MCR's 81 official fan-scoring patterns, cross-checked against the rulebook's own exclusion table.</li>
+          <li>Flat 141-action space with per-step legality exposed as an action mask; self-play PPO trains all four seats as one shared, seat-symmetric policy.</li>
+          <li>Reward at each step is the actual points swing from that action — the policy directly optimizes real MCR match settlement.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Reinforcement Learning</span><span>RLlib</span><span>PettingZoo</span>
+        </div>
+      </article>
+
       <!-- Neural ODEs -->
       <article class="project-card reveal">
         <div class="project-top">
