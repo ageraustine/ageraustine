@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ager Austine — Machine Learning / MLOps Engineer</title>
+<meta name="description" content="Ager Austine — ML/MLOps engineer working across scientific ML (PINNs, neural operators, GNNs) and agentic systems. Portfolio of shipped models and multi-agent infrastructure.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">AA<span class="nav-mark-dot">.</span></a>
+    <nav class="nav-links">
+      <a href="#log">Log</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="mailto:agerausten@gmail.com">Say hello ↗</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#log">Log</a>
+    <a href="#projects">Projects</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-trace" aria-hidden="true">
+      <svg id="phasePortrait" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <!-- populated by script.js -->
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <p class="eyebrow reveal">
+        <span class="eyebrow-dot"></span>
+        Nairobi, Kenya · Available for select engagements
+      </p>
+
+      <h1 class="hero-title reveal">
+        Ager<br>Austine
+      </h1>
+
+      <p class="hero-role reveal">
+        Machine Learning / MLOps Engineer<br>
+        <span class="hero-role-sub">Scientific ML &amp; Agentic Systems</span>
+      </p>
+
+      <p class="hero-desc reveal">
+        I work at the intersection of scientific ML — PINNs, neural operators, GNNs — and applied MLOps,
+        owning models end to end: research, evaluation, and production deployment. Recent work spans a
+        shipped text-to-music model and multi-agent systems that process petabyte-scale media pipelines.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View selected work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="hero-readout" aria-hidden="true">
+      <span>SIGNAL // dz/dt = f&#8320;(z, t)</span>
+      <span class="readout-sep">·</span>
+      <span>DeepONet · PINN · GNN · Multi-Agent</span>
+    </div>
+
+    <a href="#log" class="scroll-cue" aria-label="Scroll to content">
+      <span>Scroll</span>
+      <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M5 0V15M5 15L1 11M5 15L9 11" stroke="currentColor" stroke-width="1.4"/></svg>
+    </a>
+  </section>
+
+  <!-- INTRO / METRICS STRIP -->
+  <section class="metrics" id="metrics">
+    <div class="metrics-inner">
+      <div class="metric">
+        <span class="metric-num" data-count="99">0</span><span class="metric-suffix">%+</span>
+        <span class="metric-label">cost cut on media pipelines via observation masking<br><span class="metric-detail">$2.40 vs $15,000 / 1M files</span></span>
+      </div>
+      <div class="metric">
+        <span class="metric-num" data-count="2.5">0</span><span class="metric-suffix">M</span>
+        <span class="metric-label">files indexed in ~3 minutes<br><span class="metric-detail">millisecond search across the index</span></span>
+      </div>
+      <div class="metric">
+        <span class="metric-num" data-count="70">0</span><span class="metric-suffix">+</span>
+        <span class="metric-label">tools across a 5-agent supervisor architecture<br><span class="metric-detail">Supervisor · Reaper · FFmpeg · Search · Data</span></span>
+      </div>
+      <div class="metric">
+        <span class="metric-num" data-count="3">0</span><span class="metric-suffix">yrs+</span>
+        <span class="metric-label">shipping ML end-to-end<br><span class="metric-detail">research → eval → production</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE LOG -->
+  <section class="log" id="log">
+    <div class="section-head">
+      <p class="section-eyebrow">01 — Field Log</p>
+      <h2 class="section-title">Where the work happened</h2>
+    </div>
+
+    <div class="log-entries">
+
+      <article class="log-entry reveal">
+        <div class="log-meta">
+          <span class="log-date">AUG 2023 — PRESENT</span>
+          <span class="log-tag">Rightsify</span>
+        </div>
+        <div class="log-body">
+          <h3>AI Engineer</h3>
+          <ul>
+            <li>Built and deployed <strong>Hydra II</strong>, a text-to-music generation model — owned the pipeline from research and training through production deployment, including evaluation and failure analysis to pinpoint weak spots in generation quality and prompt adherence.</li>
+            <li>Designed and shipped a distributed systems architecture for automating Reaper DAW workflows at scale, enabling agent-driven audio/music production without manual DAW operation.</li>
+            <li>Iterated on evaluation and QA processes for generative audio models alongside audio engineers and producers, calibrating what "good" output actually looks like.</li>
+            <li>Built and maintained the MLOps stack underneath it all: PyTorch/TensorFlow training and inference pipelines, Dockerized services, GitHub Actions CI/CD, and Terraform/Ansible infrastructure-as-code.</li>
+            <li>Acted as the technical quality gate on model releases — flagging when quality, data coverage, or reliability wasn't ready to ship, and driving root-cause analysis on production failures.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="log-entry reveal">
+        <div class="log-meta">
+          <span class="log-date">JUN 2023 — PRESENT</span>
+          <span class="log-tag">Wanx AI</span>
+        </div>
+        <div class="log-body">
+          <h3>Co-Founder</h3>
+          <ul>
+            <li>Co-founded an AI venture based in Nairobi, contributing hands-on ML engineering and technical direction alongside company-building responsibilities.</li>
+            <li>Applied research-to-production experience — SciML, MLOps, model fine-tuning — directly to early-stage product and technical strategy decisions.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="log-entry reveal">
+        <div class="log-meta">
+          <span class="log-date">OCT 2019 — DEC 2025</span>
+          <span class="log-tag">Kenyatta University</span>
+        </div>
+        <div class="log-body">
+          <h3>B.Sc. Aerospace Engineering</h3>
+          <ul>
+            <li>Foundation in dynamics, numerical methods, and physical systems that now underpins the SciML work — PINNs, neural operators, and neural ODEs are, in a sense, aerospace-engineering instincts pointed at a different solver.</li>
+            <li><span class="log-inline-tag">AWS Machine Learning Foundations — Udacity, 2022</span></li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section-head">
+      <p class="section-eyebrow">02 — Selected Work</p>
+      <h2 class="section-title">Systems, not just scripts</h2>
+      <p class="section-sub">Each one shipped, trained, or benchmarked end to end — the repo link goes to source, not a slide deck.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- AIDAW -->
+      <article class="project-card project-card--feature reveal">
+        <div class="project-top">
+          <span class="project-lang">RUST</span>
+          <a href="https://github.com/ageraustine/daw-agents" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/daw-agents ↗</a>
+        </div>
+        <h3 class="project-title">AIDAW — Agentic Petabyte-Scale Media Engine</h3>
+        <p class="project-desc">
+          A multi-agent system — Supervisor, Reaper, FFmpeg, Search, and Data agents, 70+ tools total —
+          that lets studios process millions of media files through natural language instead of manual pipelines.
+        </p>
+        <ul class="project-points">
+          <li><strong>Observation masking:</strong> large datasets live in SQLite; only metadata reaches the LLM while agents exchange data directly — a 99%+ cost cut versus routing full data through model context ($2.40 vs $15,000 to process 1M files).</li>
+          <li><strong>Scale:</strong> indexing that handles millions of files (2.5M indexed in ~3 minutes) with millisecond search, across multiple LLM providers — Claude, GPT, Grok, local Ollama.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Multi-Agent</span><span>LLM Orchestration</span><span>SQLite</span><span>Rust</span>
+        </div>
+      </article>
+
+      <!-- MARL Football -->
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-lang">PYTHON</span>
+          <a href="https://github.com/ageraustine/marl-football" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/marl-football ↗</a>
+        </div>
+        <h3 class="project-title">MARL Football</h3>
+        <p class="project-desc">
+          A multi-agent reinforcement-learning environment and training pipeline for full 11-a-side football,
+          built on PettingZoo, Gymnasium, RLlib, and raylib.
+        </p>
+        <ul class="project-points">
+          <li>Physics-based simulation core with a fixed-length, zero-padded observation space — a policy trained at a smaller squad size can restore into training at a larger one with no architecture change.</li>
+          <li>Staged curriculum from 1v1 to full 11v11 (up to 15M training steps), team-level policy sharing via RLlib multi-agent PPO, and a raylib renderer for real-time match playback.</li>
+          <li>Implements offside detection, throw-ins, corners, goal kicks, and stamina-based top-speed decay from a real ruleset subset.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Reinforcement Learning</span><span>RLlib</span><span>PettingZoo</span>
+        </div>
+      </article>
+
+      <!-- Neural ODEs -->
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-lang">PYTHON / PYTORCH</span>
+          <a href="https://github.com/ageraustine/neural-ode" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/neural-ode ↗</a>
+        </div>
+        <h3 class="project-title">Neural ODEs — A PyTorch Portfolio</h3>
+        <p class="project-desc">
+          Three self-contained Neural ODE projects, chosen to show the range of "replace discrete layers with an ODE solve."
+        </p>
+        <ul class="project-points">
+          <li><strong>Spiral:</strong> the minimal reference case — fitting a vector field to a noisy 2D trajectory.</li>
+          <li><strong>Pendulum:</strong> damped-pendulum dynamics learned from data alone, with no physics terms provided, then extrapolated past the training window to confirm it learned dynamics rather than memorized data.</li>
+          <li><strong>Latent ODE:</strong> an RNN encoder feeds a continuous-time ODE and VAE-style decoder, reconstructing irregularly-sampled time series at arbitrary timestamps.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Neural ODEs</span><span>torchdiffeq</span><span>Generative</span>
+        </div>
+      </article>
+
+      <!-- Neural Operators / DeepONet -->
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-lang">PYTHON / PYTORCH</span>
+          <a href="https://github.com/ageraustine/neural-operators" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/neural-operators ↗</a>
+        </div>
+        <h3 class="project-title">Neural Operators — DeepONet Portfolio</h3>
+        <p class="project-desc">
+          DeepONet architectures — branch and trunk networks — that learn solution operators for differential equations, mapping entire input functions to output functions in a single forward pass.
+        </p>
+        <ul class="project-points">
+          <li>Two operator-learning case studies: an antiderivative operator, and a full spacetime solver for Burgers' PDE.</li>
+          <li>Includes a self-contained numerical solver to generate training data, with evaluation against unseen initial conditions.</li>
+          <li>Part of a broader SciML research thread spanning PINNs and neural ODEs — probing where learned solvers hold up against, and diverge from, classical numerical methods.</li>
+        </ul>
+        <div class="project-tags">
+          <span>DeepONet</span><span>PINNs</span><span>Operator Learning</span>
+        </div>
+      </article>
+
+      <!-- GarageOS - link only, honest minimal card -->
+      <article class="project-card project-card--minor reveal">
+        <div class="project-top">
+          <span class="project-lang">SOURCE</span>
+          <a href="https://github.com/ageraustine/garageos" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/garageos ↗</a>
+        </div>
+        <h3 class="project-title">GarageOS</h3>
+        <p class="project-desc">
+          An additional systems project — browse the source on GitHub for the current build and README.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack" id="stack">
+    <div class="section-head">
+      <p class="section-eyebrow">03 — Instrumentation</p>
+      <h2 class="section-title">What's on the bench</h2>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-group reveal">
+        <h3>ML Frameworks</h3>
+        <p>PyTorch, TensorFlow</p>
+      </div>
+      <div class="stack-group reveal">
+        <h3>ML Techniques</h3>
+        <p>Physics-informed neural networks (PINNs), neural operators (DeepONet), neural ODEs, Graph Neural Networks (GNNs), knowledge distillation, model fine-tuning</p>
+      </div>
+      <div class="stack-group reveal">
+        <h3>MLOps &amp; DevOps</h3>
+        <p>MLOps, data engineering, Docker, distributed systems design, CI/CD (GitHub Actions), infrastructure-as-code (Terraform, Ansible)</p>
+      </div>
+      <div class="stack-group reveal">
+        <h3>Languages</h3>
+        <p>Python, Rust, Go</p>
+      </div>
+      <div class="stack-group reveal">
+        <h3>Applied Domains</h3>
+        <p>Generative audio/music models, multi-agent LLM systems, evaluation &amp; QA design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-photo reveal">
+        <img src="assets/profile.png" alt="Portrait of Ager Austine" loading="lazy">
+      </div>
+      <div class="contact-copy reveal">
+        <p class="section-eyebrow">04 — Get In Touch</p>
+        <h2 class="section-title">Let's build something that has to work in production.</h2>
+        <p class="contact-desc">
+          Open to conversations on scientific ML, agentic systems, and MLOps roles or collaborations.
+          The fastest way to reach me is email.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:agerausten@gmail.com" class="contact-link">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">agerausten@gmail.com ↗</span>
+          </a>
+          <a href="https://github.com/ageraustine" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-value">github.com/ageraustine ↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ager-austine/" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">linkedin.com/in/ager-austine ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>Ager Austine — Nairobi, Kenya</span>
+  <span>Built &amp; deployed like everything else here.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
