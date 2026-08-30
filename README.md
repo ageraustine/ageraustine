@@ -118,6 +118,16 @@ Branch/trunk DeepONet architectures learning solution operators for differential
 
 </td>
 </tr>
+
+### 🔧 [GarageOS](#) — Private repository
+`FastAPI` `Next.js` `PostgreSQL` `M-Pesa`
+
+Trust-infrastructure platform for multi-branch auto-repair chains in East Africa — trust measured at the moment of work, shown to the customer instantly, and rolled up to the brand in real time.
+
+- 🔗 **Magic link** repair tracking via WhatsApp/SMS — estimates, approvals, and M-Pesa payment, no app install
+- 🏆 **Trust Score** per job: estimate accuracy (35%), verification rate (25%), timeliness (20%), quality/comeback rate (20%)
+- 🏢 Full job workflow (intake → diagnosis → working → washing → ready → paid) + HR module + multi-branch HQ visibility
+
 </table>
 
 <br>
