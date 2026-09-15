@@ -448,7 +448,7 @@ img{ max-width:100%; display:block; }
   transition: border-color .2s ease, background .2s ease, transform .2s var(--ease-out), box-shadow .2s ease;
 }
 .tech-icon{
-  width:16px; height:16px; object-fit:contain;
+  width:13px; height:13px; object-fit:contain;
   opacity:0.8; transition: opacity .2s ease;
 }
 .tech-chip:hover{
