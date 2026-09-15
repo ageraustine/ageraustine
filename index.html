@@ -281,7 +281,7 @@
       <article class="project-card reveal">
         <div class="project-top">
           <span class="project-lang">PYTHON / TYPESCRIPT</span>
-          <span class="project-link project-link--static">Private repository</span>
+          <a href="https://github.com/ageraustine/garageos" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/garageos ↗</a>
         </div>
         <h3 class="project-title">GarageOS</h3>
         <p class="project-desc">
@@ -294,6 +294,26 @@
         </ul>
         <div class="project-tags">
           <span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>M-Pesa</span>
+        </div>
+      </article>
+
+      <!-- R.O.A.D. Historical HTR Pipeline -->
+      <article class="project-card reveal">
+        <div class="project-top">
+          <span class="project-lang">PYTHON / PYTORCH</span>
+          <a href="https://github.com/ageraustine/OCR-ROAD-BARBADOS" target="_blank" rel="noopener" class="project-link">github.com/ageraustine/OCR-ROAD-BARBADOS ↗</a>
+        </div>
+        <h3 class="project-title">R.O.A.D. — Historical HTR Pipeline</h3>
+        <p class="project-desc">
+          A fine-tuning and evaluation pipeline for historical document handwriting recognition, built on Qwen3-VL vision-language models and tuned for degraded archival records — complex handwriting, caret insertions, historical tildes, money-in-words.
+        </p>
+        <ul class="project-points">
+          <li><strong>Asymmetric LoRA:</strong> high-rank (r=64) adapters on the vision tower to capture stroke patterns and ink fading, lower-rank (r=16/32) on the language model, via rank-stabilized LoRA.</li>
+          <li><strong>Condition-aware augmentation:</strong> scores each document on 5 degradation metrics and switches between degradation vs. geometric augmentations so poor-condition scans aren't further destroyed.</li>
+          <li>Stratified 90/10 split across 36 bins of degradation, text difficulty, and naming patterns; evaluated on a blended WER/CER score with early stopping.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Vision-Language Models</span><span>LoRA</span><span>OCR / HTR</span>
         </div>
       </article>
 

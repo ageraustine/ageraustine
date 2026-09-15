@@ -28,6 +28,27 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   });
 })();
 
+/* ---------- NAV: scroll-spy active section ---------- */
+(function scrollSpy(){
+  const sections = ['log', 'projects', 'stack', 'contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const links = Array.from(document.querySelectorAll('.nav-links a'));
+  if(!sections.length || !links.length) return;
+
+  const setActive = (id) => {
+    links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(sec => io.observe(sec));
+})();
+
 /* ---------- SCROLL REVEAL ---------- */
 (function reveal(){
   const items = document.querySelectorAll('.reveal');
@@ -104,18 +125,18 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   };
 
   // faint background grid (blueprint feel)
-  const gridGroup = mk('g', { opacity: '0.05' });
+  const gridGroup = mk('g', { opacity: '0.06' });
   for(let x = 0; x <= W; x += 60){
-    gridGroup.appendChild(mk('line', { x1:x, y1:0, x2:x, y2:H, stroke:'#E7E4DC', 'stroke-width':1 }));
+    gridGroup.appendChild(mk('line', { x1:x, y1:0, x2:x, y2:H, stroke:'#2B2116', 'stroke-width':1 }));
   }
   for(let y = 0; y <= H; y += 60){
-    gridGroup.appendChild(mk('line', { x1:0, y1:y, x2:W, y2:y, stroke:'#E7E4DC', 'stroke-width':1 }));
+    gridGroup.appendChild(mk('line', { x1:0, y1:y, x2:W, y2:y, stroke:'#2B2116', 'stroke-width':1 }));
   }
   svg.appendChild(gridGroup);
 
   // spiral flow lines — several damped spirals at different phases/radii,
   // referencing the "spiral" Neural ODE case + damped-pendulum dynamics
-  const colors = ['#5FE1C9', '#5FE1C9', '#F2A65A'];
+  const colors = ['#AD8324', '#AD8324', '#8B5A2B'];
   const spiralPaths = [];
 
   for(let s = 0; s < 3; s++){
@@ -163,7 +184,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
   // small orbiting node marking "current state" on the outer spiral
   if(!prefersReducedMotion){
-    const dot = mk('circle', { r:4, fill:'#5FE1C9' });
+    const dot = mk('circle', { r:4, fill:'#E3B94E' });
     svg.appendChild(dot);
     const path = spiralPaths[0];
     const len = path.getTotalLength();
@@ -181,7 +202,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   }
 
   // faint waveform strip along the bottom — nods to the audio-generation work
-  const waveGroup = mk('g', { opacity:'0.28' });
+  const waveGroup = mk('g', { opacity:'0.32' });
   const waveY = H * 0.86;
   const bars = 64;
   const barW = (W * 0.42) / bars;
@@ -194,9 +215,34 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
       y: (waveY - h/2).toFixed(1),
       width: Math.max(barW - 1.4, 1),
       height: h.toFixed(1),
-      fill:'#F2A65A',
+      fill:'#8B5A2B',
       rx: 0.6,
     }));
   }
   svg.appendChild(waveGroup);
+
+  // subtle cursor parallax on desktop — the trace drifts gently toward the pointer
+  if(!prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+    const wrap = svg.parentElement; // .hero-trace
+    const hero = document.getElementById('hero');
+    let targetX = 0, targetY = 0, curX = 0, curY = 0;
+    const maxShift = 14;
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+      targetX = nx * maxShift;
+      targetY = ny * maxShift;
+    });
+    hero.addEventListener('mouseleave', () => { targetX = 0; targetY = 0; });
+
+    const raf = () => {
+      curX += (targetX - curX) * 0.06;
+      curY += (targetY - curY) * 0.06;
+      wrap.style.transform = `translate(${curX.toFixed(2)}px, ${curY.toFixed(2)}px)`;
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  }
 })();

@@ -1,4 +1,4 @@
-# Ager Austine — Portfolio
+# Deployment Guide
 
 A static site: `index.html`, `styles.css`, `script.js`, `assets/profile.png`. No build step, no dependencies.
 

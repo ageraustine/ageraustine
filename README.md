@@ -10,10 +10,10 @@ _Shipping models end-to-end: research → evaluation → production. No slide de
 
 📍 Nairobi, Kenya
 
-[![Email](https://img.shields.io/badge/Email-agerausten%40gmail.com-5FE1C9?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0B0F19)](mailto:agerausten@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-ager--austine-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0B0F19)](https://www.linkedin.com/in/ager-austine/)
-[![GitHub](https://img.shields.io/badge/GitHub-ageraustine-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0B0F19)](https://github.com/ageraustine)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live%20Site-F2A65A?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0B0F19)](https://ageraustine.github.io)
+[![Email](https://img.shields.io/badge/Email-agerausten%40gmail.com-E3B94E?style=for-the-badge&logo=gmail&logoColor=white&labelColor=2B2116)](mailto:agerausten@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ager--austine-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2B2116)](https://www.linkedin.com/in/ager-austine/)
+[![GitHub](https://img.shields.io/badge/GitHub-ageraustine-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=2B2116)](https://github.com/ageraustine)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live%20Site-8B5A2B?style=for-the-badge&logo=vercel&logoColor=white&labelColor=2B2116)](https://ageraustine.github.io)
 
 </div>
 
@@ -133,7 +133,7 @@ Branch/trunk DeepONet architectures learning solution operators for differential
 </td>
 <td width="50%" valign="top">
 
-### 🔧 [GarageOS](#) — Private repository
+### 🔧 [GarageOS](https://github.com/ageraustine/garageos)
 `FastAPI` `Next.js` `PostgreSQL` `M-Pesa`
 
 Trust-infrastructure platform for multi-branch auto-repair chains in East Africa — trust measured at the moment of work, shown to the customer instantly, and rolled up to the brand in real time.
@@ -141,6 +141,18 @@ Trust-infrastructure platform for multi-branch auto-repair chains in East Africa
 - 🔗 **Magic link** repair tracking via WhatsApp/SMS — estimates, approvals, and M-Pesa payment, no app install
 - 🏆 **Trust Score** per job: estimate accuracy (35%), verification rate (25%), timeliness (20%), quality/comeback rate (20%)
 - 🏢 Full job workflow (intake → diagnosis → working → washing → ready → paid) + HR module + multi-branch HQ visibility
+
+</td>
+<td width="50%" valign="top">
+
+### ✍️ [R.O.A.D. — Historical HTR Pipeline](https://github.com/ageraustine/OCR-ROAD-BARBADOS)
+`PyTorch` `Qwen3-VL` `LoRA`
+
+Fine-tuning and evaluation pipeline for historical document handwriting recognition, built on Qwen3-VL vision-language models and tuned for degraded archival records.
+
+- 🎯 **Asymmetric LoRA** — high-rank (r=64) on the vision tower for stroke/degradation detail, lower-rank (r=16/32) on the language model
+- 🩹 **Condition-aware augmentation** — scores 5 degradation metrics per document and swaps degradation vs. geometric augmentations accordingly
+- 📐 Stratified 90/10 split across 36 bins; scored on blended WER/CER with early stopping
 
 </td>
 </tr>
