@@ -177,7 +177,7 @@ Open to conversations on scientific ML, agentic systems, and MLOps roles or coll
 
 <div align="center">
 
-**[agerausten@gmail.com](mailto:agerausten@gmail.com)** · **[linkedin.com/in/ager-austine](https://www.linkedin.com/in/ager-austine/)** · **[github.com/ageraustine](https://github.com/ageraustine)**
+**[agerausten@gmail.com](mailto:agerausten@gmail.com)** · **[WhatsApp](https://wa.me/254743737349)** · **[Signal](https://signal.me/#p/+254743737349)** · **[linkedin.com/in/ager-austine](https://www.linkedin.com/in/ager-austine/)** · **[github.com/ageraustine](https://github.com/ageraustine)**
 
 <sub>Built &amp; deployed like everything else here. 🛰️</sub>
 
