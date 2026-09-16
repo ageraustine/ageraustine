@@ -116,7 +116,8 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
   const NS = 'http://www.w3.org/2000/svg';
   const W = 1200, H = 800;
-  const cx = W * 0.72, cy = H * 0.42;
+  const isMobile = window.innerWidth <= 760;
+  const cx = W * (isMobile ? 0.58 : 0.72), cy = H * 0.42;
 
   const mk = (tag, attrs) => {
     const el = document.createElementNS(NS, tag);
@@ -202,7 +203,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   }
 
   // faint waveform strip along the bottom — nods to the audio-generation work
-  const waveGroup = mk('g', { opacity:'0.32' });
+  const waveGroup = mk('g', { opacity:'0.32', class:'hero-wave' });
   const waveY = H * 0.86;
   const bars = 64;
   const barW = (W * 0.42) / bars;
