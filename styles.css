@@ -274,10 +274,6 @@ img{ max-width:100%; display:block; }
 }
 .readout-sep{ color:var(--slate-dim); }
 
-@media (max-width:760px){
-  .hero-wave{ display:none; }
-}
-
 .scroll-cue{
   position:absolute; bottom:28px; left:var(--edge);
   display:flex; align-items:center; gap:8px;

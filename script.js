@@ -207,7 +207,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   const waveY = H * 0.86;
   const bars = 64;
   const barW = (W * 0.42) / bars;
-  const waveStartX = W * 0.06; // fallback before alignment runs
+  // On mobile the trace sits in a small box next to the name (not the full
+  // hero), so center the waveform under the spiral itself rather than
+  // aligning to the readout row further down the page.
+  const waveStartX = isMobile ? (cx - (bars * barW) / 2) : W * 0.06;
   for(let i = 0; i < bars; i++){
     const h = 6 + Math.abs(Math.sin(i * 0.45) * Math.cos(i * 0.12)) * 46;
     const x = waveStartX + i * barW;
@@ -225,6 +228,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   // Align the waveform's left edge with the hero content column (the readout
   // row / hero-inner), accounting for the SVG's xMidYMid "slice" scaling.
   const alignWaveform = () => {
+    if(isMobile) return; // mobile trace box isn't tied to the readout row's position
     const target = document.querySelector('.hero-readout') || document.querySelector('.hero-inner');
     if(!target) return;
     const svgRect = svg.getBoundingClientRect();
@@ -235,9 +239,11 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     const viewBoxX = (targetRect.left - svgRect.left - offsetX) / scale;
     waveGroup.setAttribute('transform', `translate(${(viewBoxX - waveStartX).toFixed(1)}, 0)`);
   };
-  requestAnimationFrame(() => requestAnimationFrame(alignWaveform));
-  window.addEventListener('resize', alignWaveform);
-  window.addEventListener('load', alignWaveform);
+  if(!isMobile){
+    requestAnimationFrame(() => requestAnimationFrame(alignWaveform));
+    window.addEventListener('resize', alignWaveform);
+    window.addEventListener('load', alignWaveform);
+  }
 
   // subtle cursor parallax on desktop — the trace drifts gently toward the pointer
   if(!prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
