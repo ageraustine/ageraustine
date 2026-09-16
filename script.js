@@ -206,7 +206,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   const waveY = H * 0.86;
   const bars = 64;
   const barW = (W * 0.42) / bars;
-  const waveStartX = W * 0.06;
+  const waveStartX = W * 0.06; // fallback before alignment runs
   for(let i = 0; i < bars; i++){
     const h = 6 + Math.abs(Math.sin(i * 0.45) * Math.cos(i * 0.12)) * 46;
     const x = waveStartX + i * barW;
@@ -220,6 +220,23 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     }));
   }
   svg.appendChild(waveGroup);
+
+  // Align the waveform's left edge with the hero content column (the readout
+  // row / hero-inner), accounting for the SVG's xMidYMid "slice" scaling.
+  const alignWaveform = () => {
+    const target = document.querySelector('.hero-readout') || document.querySelector('.hero-inner');
+    if(!target) return;
+    const svgRect = svg.getBoundingClientRect();
+    if(!svgRect.width || !svgRect.height) return;
+    const scale = Math.max(svgRect.width / W, svgRect.height / H);
+    const offsetX = (svgRect.width - W * scale) / 2;
+    const targetRect = target.getBoundingClientRect();
+    const viewBoxX = (targetRect.left - svgRect.left - offsetX) / scale;
+    waveGroup.setAttribute('transform', `translate(${(viewBoxX - waveStartX).toFixed(1)}, 0)`);
+  };
+  requestAnimationFrame(() => requestAnimationFrame(alignWaveform));
+  window.addEventListener('resize', alignWaveform);
+  window.addEventListener('load', alignWaveform);
 
   // subtle cursor parallax on desktop — the trace drifts gently toward the pointer
   if(!prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
