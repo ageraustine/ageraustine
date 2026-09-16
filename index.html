@@ -191,6 +191,10 @@
           <li><strong>Observation masking:</strong> large datasets live in SQLite; only metadata reaches the LLM while agents exchange data directly — a 99%+ cost cut versus routing full data through model context ($2.40 vs $15,000 to process 1M files).</li>
           <li><strong>Scale:</strong> indexing that handles millions of files (2.5M indexed in ~3 minutes) with millisecond search, across multiple LLM providers — Claude, GPT, Grok, local Ollama.</li>
         </ul>
+        <div class="project-shot">
+          <div class="project-shot-bar"><span></span><span></span><span></span></div>
+          <img src="assets/aidaw-cli.png" alt="AIDAW CLI on startup — agents registering (supervisor, ffmpeg, search, data), then the AIDAW ASCII logo and ready prompt" loading="lazy">
+        </div>
         <div class="project-tags">
           <span>Multi-Agent</span><span>LLM Orchestration</span><span>SQLite</span><span>Rust</span>
         </div>

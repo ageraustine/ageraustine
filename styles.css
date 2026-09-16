@@ -411,6 +411,22 @@ img{ max-width:100%; display:block; }
 }
 .project-points li strong{ color:var(--paper); font-weight:600; }
 
+.project-shot{
+  border-radius:8px; overflow:hidden;
+  border:1px solid var(--line-strong);
+  box-shadow: 0 16px 32px -18px rgba(43,33,20,0.35);
+  margin-bottom:22px;
+  background:#12100D;
+}
+.project-shot-bar{
+  display:flex; gap:6px; align-items:center;
+  padding:9px 12px; background:#1A1712;
+}
+.project-shot-bar span{
+  width:8px; height:8px; border-radius:50%; background:rgba(231,228,220,0.18);
+}
+.project-shot img{ width:100%; display:block; }
+
 .project-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-top:auto; }
 .project-tags span{
   font-family:var(--mono); font-size:11px; color:var(--amber);
